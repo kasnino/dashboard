@@ -1,4 +1,4 @@
-# Relatos Morados Web App
+# Dashboard con Vue Js prueba para Marble
 
 Proyecto para crear relatos eroticos, compartir y contactar personas
 
