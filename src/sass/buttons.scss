@@ -1,0 +1,259 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
+.grid_record{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .img_record{
+            width: 70%;
+            height: 70%;
+    }
+}
+.btn-verificar{
+    background: #5A8B34;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    span{
+        color: #FDED00;
+        margin: 0;
+        padding: 0;
+        font-family:Poppins-Bold;
+        font-size: 25px;
+    }
+}
+.btn-blue-dark{
+    border-radius: 4px;
+    background: $ibra-blue;
+    color: white;
+    font-family:Poppins-Regular;
+    font-size: 16px;
+    padding: 10px 20px;
+    span{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.btn-blue-light{
+    border-radius: 4px;
+    background: #81C7FD;
+    color:#000C1A;
+    font-family:Poppins-Regular;
+    font-size: 16px;
+    padding: 10px 20px;
+    span{
+        padding: 0;
+        margin: 0;
+        color:#000C1A;
+    }
+}
+.btn-orange{
+    border-radius: 4px;
+    background: #D37A1C;
+    color:#000C1A;
+    font-family:Poppins-Regular;
+    font-size: 16px;
+    padding: 10px 20px;
+    span{
+        padding: 0;
+        margin: 0;
+        color:#000C1A;
+    }
+}
+.btn-white-dark{
+    border-radius: 4px;
+    background: white;
+    color: $ibra-blue;
+    font-family:Poppins-Bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border:solid $ibra-blue;
+    span{
+        color:#0067AD;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.text-center{
+    color: var(--titulo-blue);
+    font-size: 2em;
+    font-family: Muli;
+    
+}
+
+.text-center_bold{
+    color: var(--titulo-blue);
+    font-size: 2.5em;
+    font-family: Muli_Bold; 
+    text-align: center;
+}
+
+.bold-blue{
+    font-family: Poppins-Bold;
+    color: $ibra-blue;
+}
+.fz-20{
+    font-size: 20px;
+}
+.fz-16{
+    font-size: 16px;
+}
+
+.cont-centro_sx {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont-centro_sx_buttons {
+    width: 100%;
+    height: 225px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: gird;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+  }
+
+  .boton_ibraco{
+    background: #0067AD;
+    color: #FFFFFF;
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    padding: 7px;
+    border-radius: 5px;
+
+}
+
+.texto_resaltado{
+    font-family: Poppins-Regular;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000C1A;
+}
+
+.citass {
+    color: var(--letra-textos); 
+    // font-style: italic;
+    font-family: Muli;
+     font-size: 14px;
+     margin-right: 70px;
+     width: 100%;
+}
+
+.card_texto{
+    p{
+      font-family: Poppins-Regular;
+      font-size: 13px;
+      padding: 28px;
+      text-align: left;
+      color: #000C1A;
+    }
+  }
+
+  @mixin textos_information {
+    .container_textos{
+    width: 100%;
+    height: 56%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+    .texto_info{
+           
+            z-index: 1;
+            // padding: 0.625em;
+            width: 80%;
+            color: var(--letra-textos);
+            font-family: Muli;
+             font-size: 0.9em;
+            align-items: center;
+            align-content: center;
+            display: grid;
+    }
+}
+
+
+//   Clases 
+  @mixin boton_descriccion{
+    .descriccion{
+          color: var(--letra-textos);
+          font-family: Muli;
+          font-size: 0.9em;
+    }
+}
+
+@mixin centrar_flex {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-align: center;
+}
+
+@mixin titulos_blue {
+    background: var(--fondo_main);
+    color: var(--titulos_blue);
+    width: 100%;
+    
+    font-size: 26px;
+    font-family: Muli_Bold;
+    @include texto_centrados();
+}
+
+@mixin texto_centrados {
+    .contenedor_texto{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+    .text_centrado{
+                font-family: Muli;
+                font-size: 1.7vh;
+                justify-content: center;
+                text-align: left;
+                width: 80%;
+                padding: 5px;
+                color: var(--letra-textos);
+                margin-top: -27px;
+            }
+        }
+}  
+
+.contenedor_info{
+    width: 100%;
+    height: 100%;
+   
+
+    h1 {
+        font-family: Muli_Bold;
+        font-size: 3.4vh;
+         color: var(--dark_title);
+         margin-top: 40px;
+    }
+    .titulo_btn{
+      font-family: Muli_Bold;
+        font-size: 4.5vh;
+        color: var(--dark_title);
+         margin-top: 40px;
+         cursor: pointer;
+    }
+}

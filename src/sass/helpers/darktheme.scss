@@ -1,0 +1,54 @@
+//Temas modifican el background de toda la pagina
+
+.themalight { 
+  --dark_title: #5D2263;
+  --texto-svg: #2C68A7;
+  --titulo-blue: #2C68A7;
+  --letra-textos: #666666; 
+  --btn_header: #72A4DA;
+  --fondo_portada: #F8F8F9;
+  --fondo_main: #F8F8F9;
+  --fondo_footer: #F8F8F9;
+  --fondo_cabezera: #FFFFFF;
+  --titulo_lg: #FFFFFF;
+  --dark_title_texto: #5D2263;
+  --titulo-texto: #2C68A7;
+  --barra-nav: #FFFFFF;
+  --letras-navbar: #160818;
+  --color_svg: #A06AAA;
+  --dark_svgacces: #666666;
+  --fondo_modalaccs: #EBF5FF;
+  --dark_svgcerrar: #5D2263;
+  --fondo_header: #F8F8F9;
+  --fondo_landing: #F8F8F9;
+  --texto_bold:#5D2263;
+} 
+
+.themadark { 
+--fondo_portada: #0b0910;
+  --texto_bold:#FFFFFF;
+  --btn_header: #72A4DA;
+--dark_title: #FFFFFF;
+--titulo-blue: #72A4DA;
+--color_svg: rgba(255,255,255,0.9);
+--texto-svg: #FFFFFF;
+--letra-textos: #f8f8f9bd;
+--fondo_main: #0b0910;  /* fallback for old browsers */
+--fondo_main: #0b0910;  /* Chrome 10-25, Safari 5.1-6 */
+--fondo_main: #0b0910; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+--fondo_header:  #060508; /* fallback for old browsers */
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+--dark_title_texto: #f8f8f9; 
+--titulo_lg: #FFFFFF;
+--titulo-texto: #72A4DA;
+--fondo_footer: #42275a;  /* fallback for old browsers */
+--fondo_footer:  #666666;  /* Chrome 10-25, Safari 5.1-6 */
+--fondo_footer:   #666666;/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+--barra-nav: #f8f8f947; 
+--letras-navbar: #FFFFFF;
+--dark_svgacces: #FFFFFF;
+--fondo_modalaccs: #000c1a7d;
+--dark_svgcerrar: #66CC33;
+--fondo_landing: #734b6d8a;
+} 
+

@@ -1,0 +1,304 @@
+/* CONTIENE:
+Imports
+Estilo de html, body y svg
+Tooltip
+Interacciones de hover -> .hvr .hvr-scale .hvr-float
+Estilo generals para tablas
+Estilos personalizados para tablas
+*/
+@import 'helpers/variables';
+@import 'helpers/darktheme';
+@import 'animate';
+@import 'animations';
+@import 'transitions';
+@import 'small.scss';
+@import 'medium.scss';
+@import 'textos.scss';
+@import 'svg.scss';
+@import "hover.scss";
+@import "buttons.scss";
+
+
+
+
+  
+
+
+
+body, html {
+  margin: 0px; //Remueve bordes en blanco
+  padding: 0px;
+  color: #2c3e50;
+   //Corrige comportamiento por defecto de Vuetify de mostrar la barra de desplazamiento incluso si no hay desbordamiento
+   overflow-x: hidden;
+  font-size: 16px;
+  ::-webkit-scrollbar {display: none;}
+  @media (max-width: 600px) {
+    font-size: 0.9rem; //Disminuye el tamaño de la fuente para celulares
+     overflow-x: hidden;
+  }
+}
+ ::-webkit-scrollbar {
+	display: none;
+ }
+
+svg {
+  max-height: 100%;
+  max-width: 100%;
+}
+ .autoscroll {
+   overflow: auto;
+}
+.instruccion {
+  font-weight: bold;
+}
+
+/**************************** CONTENIDO PARA CADA PAGINA ******************************/
+.cont_page{
+  padding: 0px 45px;
+}
+
+
+// 
+/**************************** Aumento y disminucion de las letras******************************/
+:root {
+  --font-size: 1;
+}
+
+body {
+  font-size: calc(var(--font-size) * 1em)
+}
+/**************************** FIGURECAPTION ******************************/
+figcaption{ 
+  font-family: Poppins-Italic;
+  font-size: 9px;
+  color: #000C1A;
+  margin: 0;
+  padding: 0;
+}
+
+
+/**************************** TOOLTIP INTERACTIVO ******************************/
+.ocultar{
+  display: none;
+}
+
+.tooltip {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-weight: bold;
+  display: inline-block;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+.delete_style_componentes{
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+/**************************** INTERACCIONES HOVER ******************************/
+@media (max-width: 805px){
+#modal__accesibility{
+  display: none;
+}
+}
+.hvr {
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+
+.hvr-scale {
+  transition: all 0.25s ease-in;
+
+  &:hover {
+    transform: scale(1.1)
+  }
+
+  &:active {
+    transform: scale(1.0)
+  }
+}
+
+.hvr-float {
+  transition: all 0.25s ease-in;
+
+  &:hover {
+    transform: translateY(-3px)
+  }
+
+  &:active {
+    transform: translateY(3px)
+  }
+}
+
+.hvr-color {
+  background-color: $amar-eco;
+
+  &:hover {
+    background-color: $verde-cla;
+  }
+
+  &:active, &:checked {
+    background-color: $azul-cla;
+  }
+}
+
+/***************** TABLES ***************/
+
+table, td, th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 5px;
+  position: relative;
+  font-family: Poppins-Regular;
+  font-size: 1.05em;
+}
+
+th, caption {
+  font-weight: bold;
+}
+
+td, th {
+  background-clip: padding-box; //Pequeño ajuste para firefox, corrige bug de que los bordes no se muestren cuando el td tiene un color de fondo
+}
+
+.responsive-table {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+
+/********************** CUTOM TABLE COLORS **********************/
+#mod1pag10 {
+  th {
+    &:nth-child(1) {
+      background-color: #beeb7b;
+    }
+
+    &:nth-child(2) {
+      background-color: #d8ff94;
+    }
+  }
+
+  tr {
+    border: 1px solid black;
+
+    &:nth-child(2) {
+      background-color: #fff0a6;
+      font-weight: bold;
+
+      td:nth-child(n  +2) {
+        background-color: #fff3c0;
+        font-weight: normal;
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: #fff8d9;
+    }
+
+    &:nth-child(4) {
+      background-color: #bdfffc;
+      font-weight: bold;
+
+      td:nth-child(n+2) {
+        background-color: #d7fffc;
+        font-weight: normal;
+      }
+    }
+
+    &:nth-child(2n+5) {
+      background-color: #e6fffd;
+    }
+
+    &:nth-child(2n+4) {
+      background-color: #d7fffc;
+    }
+  }
+}
+
+#mod1pag11 {
+  th {
+    &:nth-child(1) {
+      background-color: #beeb7b;
+    }
+
+    &:nth-child(2) {
+      background-color: #d8ff94;
+    }
+  }
+
+  tr {
+    border: 1px solid black;
+
+    &:nth-child(-2n+9) {
+      background-color: #fff8d9;
+    }
+
+    &:nth-child(-2n+8) {
+      background-color: #fff3c0;
+    }
+
+    &:nth-child(2) {
+      background-color: #fff0a6;
+
+      td:nth-child(n+2) {
+        background-color: #fff3c0;
+      }
+    }
+
+    &:nth-child(9) {
+      background-color: #bdfffc;
+
+      td:nth-child(n+2) {
+        background-color: #d7fffc;
+      }
+    }
+
+    &:nth-child(2n+10) {
+      background-color: #e6fffd;
+    }
+
+    &:nth-child(2n+11) {
+      background-color: #d7fffc;
+    }
+  }
+}
+
+
+.img-highlight {
+    filter: drop-shadow(0px 0px 4px gold);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+
+// MODAL
+.modal-icon-title{
+  margin: 0;
+  padding: 0;
+  height: auto;
+  font-size: 1.2em;
+  font-family: 'Poppins-Regular';
+  line-height: 1em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bd-red{
+  border: solid red;
+}
+
+.layoutPrincipal{
+  margin-top: 100px;
+}
+/*input{
+  outline: auto;
+}*/
